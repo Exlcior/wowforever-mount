@@ -1,0 +1,20 @@
+obj/
+bin/
+*.csproj.user
+.vs/
+.vscode/
+__pycache__/
+*.py[co]
+/tmp/
+/validation/
+# Data prepared locally from external sources (CMaNGOS is non-commercial): never published.
+/source/mount/wowforever/Data/spawns.txt.gz
+/source/mount/wowforever/Data/ambience.json
+# Downloads and generated tables of the data tools.
+/tools/mount_data/listfile.sqlite
+/tools/mount_data/tables/
+/tools/mount_data/*.json
+/tools/mount_data/*.log
+/source/wow_metadata/
+/source/wow_raw/
+/source/tools/wow.export/

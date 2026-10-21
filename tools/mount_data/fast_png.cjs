@@ -1,0 +1,6 @@
+// Lossless PNG with filter 0 and native zlib. Avoids the exporter's costly JS filter search.
+const zlib=require('node:zlib');
+function chunk(type,data){const t=Buffer.from(type),out=Buffer.alloc(12+data.length);out.writeUInt32BE(data.length);t.copy(out,4);data.copy(out,8);out.writeUInt32BE(zlib.crc32(Buffer.concat([t,data])),8+data.length);return out;}
+function png(width,height,pixels){const header=Buffer.alloc(13);header.writeUInt32BE(width);header.writeUInt32BE(height,4);header[8]=8;header[9]=6;const rows=Buffer.alloc(height*(width*4+1));for(let y=0;y<height;y++)pixels.copy(rows,y*(width*4+1)+1,y*width*4,(y+1)*width*4);return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',header),chunk('IDAT',zlib.deflateSync(rows,{level:1})),chunk('IEND',Buffer.alloc(0))]);}
+function valid(data){try{if(data.readUInt32BE(0)!==0x89504e47)return false;let p=8,ended=false;while(p<data.length){const len=data.readUInt32BE(p);if(p+12+len>data.length)return false;if(zlib.crc32(data.subarray(p+4,p+8+len))!==data.readUInt32BE(p+8+len))return false;if(data.toString('ascii',p+4,p+8)==='IEND')ended=true;p+=12+len;}return ended&&p===data.length;}catch{return false;}}
+module.exports={png,valid};

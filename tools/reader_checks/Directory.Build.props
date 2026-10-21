@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)../../tmp/reader-checks/obj/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

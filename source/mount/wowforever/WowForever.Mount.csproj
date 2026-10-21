@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>wowforever</AssemblyName>
+    <RootNamespace>MiniBox.WowForever</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>$(NoWarn);1591;CS8632;CS0168;CS0219;CS0162</NoWarn>
+    <TactSharpDir>$(MSBuildThisFileDirectory)../../tools/TACTSharp/TACTSharp</TactSharpDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core/**/*.cs" />
+    <Compile Include="Runtime/**/*.cs" />
+    <!-- Zone light positions (public Classic) with Forever colours, prepared by prepare_ambience.py. -->
+    <!-- Ambience and spawns are prepared locally from external sources (not in the repository): optional. -->
+    <EmbeddedResource Include="Data/ambience.json" LogicalName="wowforever.ambience.json" Condition="Exists('Data/ambience.json')" />
+    <EmbeddedResource Include="Data/model_names.txt.gz" LogicalName="wowforever.model_names.txt.gz" />
+    <EmbeddedResource Include="Data/spawns.txt.gz" LogicalName="wowforever.spawns.txt.gz" Condition="Exists('Data/spawns.txt.gz')" />
+    <EmbeddedResource Include="Data/characters.json" LogicalName="wowforever.characters.json" />
+    <EmbeddedResource Include="Data/animation_names.txt" LogicalName="wowforever.animation_names.txt" />
+    <!-- TACTSharp (MIT, wowdev) reads the player's local CASC storage; compiled into this module. -->
+    <Compile Include="$(TactSharpDir)/**/*.cs" Exclude="$(TactSharpDir)/obj/**;$(TactSharpDir)/bin/**" LinkBase="ThirdParty/TACTSharp" />
+    <Reference Include="Sandbox.Engine"><HintPath>$(SboxEngineDir)/bin/managed/Sandbox.Engine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Sandbox.System"><HintPath>$(SboxEngineDir)/bin/managed/Sandbox.System.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Sandbox.Mounting"><HintPath>$(SboxEngineDir)/bin/managed/Sandbox.Mounting.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Sandbox.Filesystem"><HintPath>$(SboxEngineDir)/bin/managed/Sandbox.Filesystem.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="RequireEngine" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(SboxEngineDir)/bin/managed/Sandbox.Mounting.dll')" Text="Pass SboxEngineDir for the installed s&amp;box engine." />
+  </Target>
+</Project>

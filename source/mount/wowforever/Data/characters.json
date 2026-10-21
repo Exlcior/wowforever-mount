@@ -1,0 +1,202 @@
+[
+ {
+  "Key": "human_male",
+  "Title": "Humain · masculin",
+  "Model": 119940,
+  "Skin": 120191,
+  "FaceLower": 119941,
+  "FaceUpper": 120061,
+  "Pelvis": 120181,
+  "Torso": 232826
+ },
+ {
+  "Key": "human_female",
+  "Title": "Humain · féminin",
+  "Model": 119563,
+  "Skin": 119887,
+  "FaceLower": 119564,
+  "FaceUpper": 119715,
+  "Pelvis": 119867,
+  "Torso": 119877
+ },
+ {
+  "Key": "dwarf_male",
+  "Title": "Nain · masculin",
+  "Model": 118355,
+  "Skin": 118551,
+  "FaceLower": 118356,
+  "FaceUpper": 118449,
+  "Pelvis": 118542,
+  "Torso": 231855
+ },
+ {
+  "Key": "dwarf_female",
+  "Title": "Nain · féminin",
+  "Model": 118135,
+  "Skin": 118334,
+  "FaceLower": 118136,
+  "FaceUpper": 118226,
+  "Pelvis": 118316,
+  "Torso": 118325
+ },
+ {
+  "Key": "gnome_male",
+  "Title": "Gnome · masculin",
+  "Model": 119159,
+  "Skin": 119235,
+  "FaceLower": 119160,
+  "FaceUpper": 119195,
+  "Pelvis": 119230,
+  "Torso": 232122
+ },
+ {
+  "Key": "gnome_female",
+  "Title": "Gnome · féminin",
+  "Model": 119063,
+  "Skin": 119144,
+  "FaceLower": 119064,
+  "FaceUpper": 119099,
+  "Pelvis": 119134,
+  "Torso": 119139
+ },
+ {
+  "Key": "nightelf_male",
+  "Title": "Elfe de la nuit · masculin",
+  "Model": 120791,
+  "Skin": 120964,
+  "FaceLower": 120793,
+  "FaceUpper": 120874,
+  "Pelvis": 120955,
+  "Torso": 233343
+ },
+ {
+  "Key": "nightelf_female",
+  "Title": "Elfe de la nuit · féminin",
+  "Model": 120590,
+  "Skin": 120772,
+  "FaceLower": 120592,
+  "FaceUpper": 120673,
+  "Pelvis": 120754,
+  "Torso": 120763
+ },
+ {
+  "Key": "orc_male",
+  "Title": "Orc · masculin",
+  "Model": 121287,
+  "Skin": 121459,
+  "FaceLower": 121288,
+  "FaceUpper": 121369,
+  "Pelvis": 121450,
+  "Torso": 233819
+ },
+ {
+  "Key": "orc_female",
+  "Title": "Orc · féminin",
+  "Model": 121087,
+  "Skin": 121268,
+  "FaceLower": 121088,
+  "FaceUpper": 121169,
+  "Pelvis": 121250,
+  "Torso": 121259
+ },
+ {
+  "Key": "scourge_male",
+  "Title": "Mort-vivant · masculin",
+  "Model": 121768,
+  "Skin": 121895,
+  "FaceLower": 121769,
+  "FaceUpper": 121829,
+  "Pelvis": 121889,
+  "Torso": 0
+ },
+ {
+  "Key": "scourge_female",
+  "Title": "Mort-vivant · féminin",
+  "Model": 121608,
+  "Skin": 121741,
+  "FaceLower": 121609,
+  "FaceUpper": 121669,
+  "Pelvis": 121729,
+  "Torso": 121735
+ },
+ {
+  "Key": "tauren_male",
+  "Title": "Tauren · masculin",
+  "Model": 122055,
+  "Skin": 122265,
+  "FaceLower": 122056,
+  "FaceUpper": 122151,
+  "Pelvis": 122246,
+  "Torso": 234201
+ },
+ {
+  "Key": "tauren_female",
+  "Title": "Tauren · féminin",
+  "Model": 121961,
+  "Skin": 122032,
+  "FaceLower": 121962,
+  "FaceUpper": 121986,
+  "Pelvis": 122010,
+  "Torso": 122021
+ },
+ {
+  "Key": "troll_male",
+  "Title": "Troll · masculin",
+  "Model": 122560,
+  "Skin": 122654,
+  "FaceLower": 122561,
+  "FaceUpper": 122600,
+  "Pelvis": 122639,
+  "Torso": 234455
+ },
+ {
+  "Key": "troll_female",
+  "Title": "Troll · féminin",
+  "Model": 122414,
+  "Skin": 122535,
+  "FaceLower": 122415,
+  "FaceUpper": 122460,
+  "Pelvis": 122505,
+  "Torso": 122520
+ },
+ {
+  "Key": "bloodelf_male",
+  "Title": "Elfe de sang · masculin",
+  "Model": 1100087,
+  "Skin": 1098758,
+  "FaceLower": 0,
+  "FaceUpper": 1098515,
+  "Pelvis": 1098728,
+  "Torso": 1098743
+ },
+ {
+  "Key": "bloodelf_female",
+  "Title": "Elfe de sang · féminin",
+  "Model": 1100258,
+  "Skin": 7484894,
+  "FaceLower": 0,
+  "FaceUpper": 0,
+  "Pelvis": 0,
+  "Torso": 0
+ },
+ {
+  "Key": "draenei_male",
+  "Title": "Draeneï · masculin",
+  "Model": 1005887,
+  "Skin": 1003984,
+  "FaceLower": 0,
+  "FaceUpper": 0,
+  "Pelvis": 0,
+  "Torso": 0
+ },
+ {
+  "Key": "draenei_female",
+  "Title": "Draeneï · féminin",
+  "Model": 1022598,
+  "Skin": 1022933,
+  "FaceLower": 0,
+  "FaceUpper": 1022931,
+  "Pelvis": 1023979,
+  "Torso": 1022932
+ }
+]
